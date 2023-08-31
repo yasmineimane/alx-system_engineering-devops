@@ -1,2 +1,2 @@
-0 string SCHOOL School data
-!:mime School
+#!/bin/bash
+echo "0 string SCHOOL" > school.mgc

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Script that prints phrase indefinitely
+#It also traps the signal SIGTERM
+
+function sig_term()
+{
+	echo "I am invincible!!!"
+}
+
+n=1
+while [ $n -eq 1 ]
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap sig_term SIGTERM
+done

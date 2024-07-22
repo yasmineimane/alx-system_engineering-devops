@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Let’s install the ufw firewall and setup a few rules on web-01
+#Let’s install the ufw firewall and setup a few rules on web-01.
 
 sudo apt install -y ufw
 sudo ufw default allow outgoing

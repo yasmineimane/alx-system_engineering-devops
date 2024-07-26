@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
+#run nginx as nginx
 systemctl stop nginx
 sed -i 's/user\s*nginx;/user nginx;\n/' /etc/nginx/nginx.conf
 systemctl start nginx
-ps auxff | grep 'ngin[x]'
+if pgrep -x nginx >/dev/null; then
+    echo "Nginx is running as the nginx user."
+else
+    echo "Nginx is not running or encountered an issue."
+fi

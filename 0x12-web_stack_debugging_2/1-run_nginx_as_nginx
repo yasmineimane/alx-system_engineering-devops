@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+systemctl stop nginx
+sed -i 's/user\s*nginx;/user nginx;\n/' /etc/nginx/nginx.conf
+systemctl start nginx
+ps auxff | grep 'ngin[x]'

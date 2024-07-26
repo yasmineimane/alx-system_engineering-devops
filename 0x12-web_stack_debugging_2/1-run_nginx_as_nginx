@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 #run nginx as nginx
 systemctl stop nginx
 sed -i 's/user\s*nginx;/user nginx;\n/' /etc/nginx/nginx.conf
